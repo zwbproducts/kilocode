@@ -1,0 +1,355 @@
+{
+	"welcome": {
+		"greeting": "歡迎使用 Kilo Code！",
+		"introText1": "Kilo Code 是一個免費的開源 AI 程式設計代理。",
+		"introText2": "它適用於最新的 AI 模型，如 Claude Sonnet 4.5、Gemini 2.5 Pro、GPT-5 以及 450 多個其他模型。",
+		"introText3": "建立免費帳戶，首次儲值即可獲得 20 美元獎勵額度。",
+		"ctaButton": "開始使用",
+		"manualModeButton": "使用你自己的 API 金鑰",
+		"alreadySignedUp": "已經註冊了？",
+		"loginText": "在此登入"
+	},
+	"lowCreditWarning": {
+		"addCredit": "添加額度",
+		"lowBalance": "你的 Kilo Code 餘額不足",
+		"newOrganization": "將 Kilo 用於工作？"
+	},
+	"invalidModel": {
+		"alphaPeriodEnded": "🎉 {{model}} 的測試期已結束！請切換到其他模型繼續使用。",
+		"notAllowedForTeam": "⚠️ 您的組織不允許使用 {{model}} 模型。請切換到其他模型繼續使用。",
+		"modelUnavailable": "⚠️ 模型 {{model}} 無法使用。請切換到其他模型繼續使用。",
+		"continueWith": "繼續使用 {{model}}",
+		"continue": "繼續"
+	},
+	"pricing": {
+		"costUnknown": "費用未知",
+		"costUnknownDescription": "API 提供商未提供任何費用資料或請求已取消。",
+		"freeModelsLink": "探索免費模型選項"
+	},
+	"notifications": {
+		"toolRequest": "工具請求等待核准",
+		"browserAction": "瀏覽器動作等待核准",
+		"command": "指令等待核准"
+	},
+	"settings": {
+		"sections": {
+			"mcp": "MCP 伺服器"
+		},
+		"contextManagement": {
+			"allowVeryLargeReads": {
+				"label": "允許超大檔案讀取",
+				"description": "啟用後，Kilo Code 將執行超大檔案或 MCP 輸出讀取，即使存在高機率溢出上下文視窗（內容大小 >80% 的上下文視窗）。"
+			}
+		},
+		"systemNotifications": {
+			"label": "啟用系統通知",
+			"description": "啟用後 Kilo Code 將發送系統通知，提醒工作完成或錯誤等重要事件。",
+			"testButton": "測試通知",
+			"testTitle": "Kilo Code",
+			"testMessage": "這是來自 Kilo Code 的測試通知。"
+		},
+		"provider": {
+			"account": "Kilo Code 帳戶",
+			"apiKey": "Kilo Code API 金鑰",
+			"login": "登入 Kilo Code",
+			"logout": "登出 Kilo Code",
+			"providerRouting": {
+				"title": "供應商路由",
+				"managedByOrganization": "管理組織層級供應商路由",
+				"createOrganization": "建立組織以管理供應商路由",
+				"description": "Kilo Code 將請求路由到您模型的最佳可用供應商。預設情況下，請求會在頂級供應商之間進行負載平衡，以最大化正常執行時間。但是，您可以選擇要用於此模型的特定供應商。",
+				"sorting": {
+					"default": "預設供應商排序",
+					"price": "偏好較低價格的供應商",
+					"throughput": "偏好較高輸送量的供應商",
+					"latency": "偏好較低延遲的供應商"
+				},
+				"dataCollection": {
+					"default": "未設定資料政策",
+					"allowFree": "允許提示詞訓練（僅免費）",
+					"allow": "允許提示詞訓練",
+					"deny": "拒絕提示詞訓練",
+					"zdr": "零資料保留"
+				}
+			},
+			"automaticFetch": "最新模型會自動在 Kilo Code 中提供。如果您不確定要選擇哪個模型，Kilo Code 與列在頂部<strong>粗體</strong>顯示的推薦模型搭配使用效果最佳。"
+		},
+		"modelInfo": {
+			"contextWindow": "上下文視窗",
+			"providerBreakdown": "供應商價格與功能明細",
+			"averageKiloCodeCost": "這是過去一週 Kilo Code 使用此模型的平均實際花費。由於提示詞快取的使用，可能低於列出的價格。",
+			"table": {
+				"provider": "供應商",
+				"context": "端點可以處理這個數量的 Token（輸入 + 輸出）。",
+				"inputPrice": "提示每百萬 Token 的費用。",
+				"outputPrice": "完成每百萬 Token 的費用。",
+				"cacheReadPrice": "從快取讀取每百萬 Token 的費用。",
+				"cacheWritePrice": "寫入快取每百萬 Token 的費用。"
+			}
+		},
+		"terminal": {
+			"commandGenerator": {
+				"apiConfigId": {
+					"label": "API 設定檔",
+					"description": "選擇用於產生終端命令的 API 設定檔。選擇\"使用目前設定檔\"則使用您的預設設定檔。",
+					"current": "使用目前設定檔"
+				},
+				"provider": "終端機命令產生器供應商"
+			}
+		},
+		"codeIndex": {
+			"embeddingBatchSizeLabel": "Embedding 批次大小",
+			"embeddingBatchSizeDescription": "用於 Embedding 生成和向量儲存更新的程式碼片段批次數量。較大的值可以提高索引速度，但可能增加記憶體使用量。較小的值可以減少記憶體使用量，但可能降低索引速度。",
+			"scannerMaxBatchRetriesLabel": "掃描器最大批次重試次數",
+			"scannerMaxBatchRetriesDescription": "目錄掃描期間重試失敗批次的最大次數。較大的值可以提高對暫時性錯誤的容錯能力，但如果錯誤持續存在可能會降低索引速度。較小的值會更快失敗，但可能在暫時性問題時跳過內容。"
+		}
+	},
+	"toolCallStyle": {
+		"title": "工具呼叫樣式",
+		"description": "選擇系統提示中工具呼叫的格式化方式。JSON 目前為實驗性功能，主要供有興趣參與開發的使用者使用。",
+		"automatic": "讓 Kilo 決定",
+		"xml": "XML",
+		"json": "JSON"
+	},
+	"chat": {
+		"condense": {
+			"wantsToCondense": "Kilo Code 想要壓縮你的對話",
+			"condenseConversation": "壓縮對話"
+		},
+		"seeNewChanges": "顯示新變更",
+		"revertNewChanges": "還原新變更",
+		"confirmRevertChanges": "確認還原變更",
+		"cancelRevertChanges": "取消還原變更"
+	},
+	"newTaskPreview": {
+		"task": "任務"
+	},
+	"profile": {
+		"title": "個人檔案",
+		"dashboard": "儀表板",
+		"logOut": "登出",
+		"currentBalance": "目前餘額",
+		"loading": "載入中...",
+		"organization": "組織",
+		"personal": "個人",
+		"shop": {
+			"title": "購買點數",
+			"popular": "熱門",
+			"credits": "點數",
+			"action": "立即購買",
+			"viewAll": "檢視所有價格選項"
+		},
+		"detailedUsage": "詳細使用情況",
+		"createOrganization": "建立組織以追蹤詳細使用情況"
+	},
+	"docs": "文件",
+	"rules": {
+		"tooltip": "管理 Kilo Code 規則和工作流程",
+		"ariaLabel": "Kilo Code 規則",
+		"tabs": {
+			"rules": "規則",
+			"workflows": "工作流程"
+		},
+		"description": {
+			"rules": "規則允許你為 Kilo Code 提供在所有模式和所有提示中都應遵循的指令。它們是在你的工作空間或全域範圍內為所有對話包含上下文和偏好的持久方式。",
+			"workflows": "工作流程是為對話準備的範本。工作流程允許你定義經常使用的提示，並可以包含一系列步驟來指導 Kilo Code 完成重複性任務，如部署服務或提交 PR。要調用工作流程，請輸入",
+			"workflowsInChat": "在聊天中。"
+		},
+		"sections": {
+			"globalRules": "全域規則",
+			"workspaceRules": "工作區規則",
+			"globalWorkflows": "全域工作流程",
+			"workspaceWorkflows": "工作區工作流程"
+		},
+		"validation": {
+			"invalidFileExtension": "僅允許 .md、.txt 或無檔案副檔名"
+		},
+		"placeholders": {
+			"workflowName": "工作流程名稱（.md、.txt 或無副檔名）",
+			"ruleName": "規則名稱（.md、.txt 或無副檔名）"
+		},
+		"newFile": {
+			"newWorkflowFile": "新建工作流程檔案...",
+			"newRuleFile": "新建規則檔案..."
+		}
+	},
+	"taskTimeline": {
+		"tooltip": {
+			"clickToScroll": "查看 {{messageType}} (#{{messageNumber}})",
+			"messageTypes": {
+				"browser_action_result": "瀏覽器操作結果",
+				"browser_action": "瀏覽器操作",
+				"browser_action_launch": "瀏覽器啟動",
+				"checkpoint_saved": "檢查點已儲存",
+				"command": "指令執行",
+				"completion_result": "完成結果",
+				"command_output": "指令輸出",
+				"condense_context": "壓縮上下文",
+				"error": "錯誤訊息",
+				"followup": "後續問題",
+				"mcp_server_response": "MCP 伺服器回應",
+				"reasoning": "AI 推理",
+				"text": "AI 回覆",
+				"tool": "工具使用",
+				"use_mcp_server": "MCP 伺服器使用情況",
+				"unknown": "未知訊息類型",
+				"user": "使用者回饋"
+			}
+		}
+	},
+	"userFeedback": {
+		"editCancel": "取消",
+		"send": "發送",
+		"restoreAndSend": "恢復並發送"
+	},
+	"ideaSuggestionsBox": {
+		"newHere": "新用戶？",
+		"suggestionText": "<suggestionButton>點擊這裡</suggestionButton>獲取有趣的想法，然後點按 <sendIcon /> 看我施展魔法！",
+		"ideas": {
+			"idea1": "建立一個旋轉發光的 3D 球體，能夠回應滑鼠移動。讓應用程式在瀏覽器中運行。",
+			"idea2": "為 Python 軟體開發者建立作品集網站",
+			"idea3": "在瀏覽器中建立金融應用程式模型。然後測試是否可以正常運作",
+			"idea4": "建立一個目錄網站，包含目前最好的 AI 影片生成模型",
+			"idea5": "建立一個 CSS 漸層產生器，匯出自訂樣式表並顯示即時預覽",
+			"idea6": "產生在滑鼠停留時優雅展示動態內容的卡片",
+			"idea7": "建立一個寧靜的互動式星空，跟隨滑鼠手勢移動"
+		}
+	},
+	"ghost": {
+		"title": "自動補全",
+		"settings": {
+			"enableAutoTrigger": {
+				"label": "Auto-trigger Suggestions",
+				"description": "當您暫停輸入時自動顯示內嵌程式碼建議。"
+			},
+			"autoTriggerDelay": {
+				"label": "自動觸發延遲",
+				"description": "The delay in seconds before suggestions appear after you pause typing. A shorter delay means quicker suggestions, but may be more resource-intensive."
+			},
+			"enableSmartInlineTaskKeybinding": {
+				"label": "Trigger on Keybinding ({{keybinding}})",
+				"description": "Press {{keybinding}} to request a code suggestion at your cursor position. <DocsLink>Edit shortcut</DocsLink>"
+			},
+			"keybindingNotFound": "未找到",
+			"configureAutocompleteProfile": "前往設定檔並設定自動補全類型的設定檔即可使用任意模型。",
+			"model": "模型",
+			"provider": "供應商",
+			"enableChatAutocomplete": {
+				"label": "Enable Chat Autocomplete",
+				"description": "Show completions as you type in the chat input. Press Tab to accept suggestions."
+			},
+			"snooze": {
+				"label": "Snooze Suggestions",
+				"description": "Temporarily pause suggestions for a specified duration.",
+				"button": "暫停",
+				"unsnooze": "取消暫停",
+				"currentlySnoozed": "Suggestions are currently snoozed.",
+				"duration": {
+					"1min": "1 分鐘",
+					"5min": "5 分鐘",
+					"15min": "15 分鐘",
+					"30min": "30 分鐘",
+					"1hour": "1 小時"
+				}
+			},
+			"noModelConfigured": {
+				"title": "未設定自動補全模型",
+				"description": "若要啟用自動補全，請新增一個使用以下支援供應商的設定檔：",
+				"learnMore": "了解更多關於自動補全設定 →"
+			},
+			"noCredits": {
+				"title": "您的帳戶沒有額度",
+				"description": "您的 Kilo Code 帳戶沒有額度。若要使用自動補全，請為您的帳戶儲值。",
+				"buyCredits": "購買額度 →"
+			},
+			"codeEditorSuggestions": "Code Editor Suggestions",
+			"chatSuggestions": "Chat Suggestions"
+		}
+	},
+	"virtualProvider": {
+		"title": "虛擬配額回滾供應商設定",
+		"description": "建立一個設定檔清單，每個設定檔都有各自的配額限制。當一個供應商的配額達到上限時，將使用清單中的下一個設定檔，直到沒有剩餘的設定檔為止。",
+		"profileLabel": "設定檔 {{number}}",
+		"primaryProfileLabel": "設定檔 {{number}} (主要)",
+		"moveProfileUp": "向上移動設定檔",
+		"moveProfileDown": "向下移動設定檔",
+		"removeProfile": "移除設定檔",
+		"selectProfilePlaceholder": "選擇設定檔...",
+		"addProfile": "新增設定檔",
+		"noProfilesAvailable": "沒有可用的設定檔。請先配置至少一個非虛擬供應商設定檔。",
+		"dangerZoneTitle": "危險區域",
+		"dangerZoneDescription": "這些操作具有破壞性且無法復原。",
+		"clearUsageData": "清除使用資料",
+		"confirmClearTitle": "確定嗎？",
+		"confirmClearDescription": "這將永久刪除虛擬供應商儲存的所有使用資料。此操作無法復原。",
+		"perMinute": "每分鐘",
+		"tokensLabel": "Tokens",
+		"perDay": "每天",
+		"perHour": "每小時",
+		"requestsLabel": "請求"
+	},
+	"pagination": {
+		"previous": "上一頁",
+		"next": "下一頁",
+		"page": "第 {{page}} 頁 / 共 {{count}} 頁"
+	},
+	"imageWarnings": {
+		"modelNoImageSupport": "當前模型不支援圖片。",
+		"maxImagesReached": "每條訊息最多可包含 20 張圖片。請刪除部分圖片以新增更多圖片。",
+		"imagesRemovedNoSupport": "已移除圖片，模型不支援。"
+	},
+	"memoryWarning": {
+		"message": "記憶體使用量已達 {{percentage}}%。請重新啟動您的 IDE 以防止當機。"
+	},
+	"marketplace": {
+		"mcp": {
+			"description": "这些MCP服务器由社区维护。点击<1>这里</1>编辑您自己的MCP设置。"
+		},
+		"modes": {
+			"description": "这些模式来自社区提供。点击<1>这里</1>编辑您自己的自定义模式。"
+		}
+	},
+	"modes": {
+		"shareModesNewBanner": "新功能：通过创建组织共享模式"
+	},
+	"deviceAuth": {
+		"title": "登入 Kilo Code",
+		"step1": "在瀏覽器中開啟以下 URL",
+		"step2": "驗證代碼並在瀏覽器中授權此裝置",
+		"scanQr": "或用手機掃描此 QR 碼",
+		"openBrowser": "開啟瀏覽器",
+		"copyUrl": "複製 URL",
+		"waiting": "等待授權...",
+		"timeRemaining": "代碼將在 {{time}} 後過期",
+		"success": "登入成功！",
+		"authenticatedAs": "已驗證為 {{email}}",
+		"error": "驗證錯誤",
+		"unknownError": "發生錯誤。請重試。",
+		"cancel": "取消",
+		"retry": "重試",
+		"tryAgain": "重試",
+		"cancelled": "驗證已取消",
+		"initiating": "正在啟動驗證..."
+	},
+	"speechToText": {
+		"startRecording": "开始语音输入",
+		"stopRecording": "停止语音输入",
+		"setupPopover": {
+			"title": "语音转文字",
+			"openAiReason": "您需要一个有效的 OpenAI 提供商和 API 密钥才能使用语音转录功能。",
+			"description": "语音转文字功能不可用。语音转文字需要同时配置 FFmpeg 和有效的 OpenAI 提供商。<moreInfoLink>点击此处了解更多信息</moreInfoLink>。",
+			"ffmpegReason": "您需要安装 FFmpeg。<ffmpegLink>点击这里</ffmpegLink>让 Kilo 帮助您安装 FFmpeg。",
+			"ffmpegMessage": "帮我安装 FFmpeg"
+		},
+		"misconfiguredState": "因配置问题而不可用",
+		"errorState": "因错误而不可用",
+		"microphone": {
+			"label": "麥克風",
+			"description": "選擇麥克風設備進行語音轉文字",
+			"loading": "正在載入麥克風設備...",
+			"refresh": "重新整理",
+			"defaultOption": "系統預設",
+			"noDevices": "找不到麥克風設備"
+		}
+	}
+}
