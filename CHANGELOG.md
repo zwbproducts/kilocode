@@ -1,5 +1,66 @@
 # kilo-code
 
+## 5.8.0
+
+### Minor Changes
+
+- [#5247](https://github.com/Kilo-Org/kilocode/pull/5247) [`12ea08e`](https://github.com/Kilo-Org/kilocode/commit/12ea08e6a5051d172910a620ce99e95fca1da88e) Thanks [@theQuert](https://github.com/theQuert)! - Add Apertis as a new API provider
+
+- [#5526](https://github.com/Kilo-Org/kilocode/pull/5526) [`fe86f25`](https://github.com/Kilo-Org/kilocode/commit/fe86f25b2cb1960247e5dfaff01fd6650f95509d) Thanks [@nubol23](https://github.com/nubol23)! - Added Voyage AI embedder support
+
+### Patch Changes
+
+- [#5878](https://github.com/Kilo-Org/kilocode/pull/5878) [`74a9d8d`](https://github.com/Kilo-Org/kilocode/commit/74a9d8dc208664226d506a6018be6c982c25f0e3) Thanks [@CoinAnole](https://github.com/CoinAnole)! - Fix Moonshot coding endpoint model selection so it includes all Moonshot models while keeping `kimi-for-coding` hidden on non-coding endpoints.
+
+- [#5746](https://github.com/Kilo-Org/kilocode/pull/5746) [`38ea95b`](https://github.com/Kilo-Org/kilocode/commit/38ea95baadc7e3aec5fc6b139b25e95a57ab529a) Thanks [@Githubguy132010](https://github.com/Githubguy132010)! - Add dev container persistence for threads and settings
+
+- [#5575](https://github.com/Kilo-Org/kilocode/pull/5575) [`c43b9b4`](https://github.com/Kilo-Org/kilocode/commit/c43b9b4cc14c6ea8d58f90ad1b1ce15201f20deb) Thanks [@Patel230](https://github.com/Patel230)! - fix: treat maxReadFileLine=0 as unlimited (same as -1)
+
+- [#5639](https://github.com/Kilo-Org/kilocode/pull/5639) [`853b03f`](https://github.com/Kilo-Org/kilocode/commit/853b03f4c6e340c26e9cddd13dae958815560c18) Thanks [@mikij](https://github.com/mikij)! - Updates some visual bugs in Agent Behaviour settings page
+
+- [#5195](https://github.com/Kilo-Org/kilocode/pull/5195) [`d463a8b`](https://github.com/Kilo-Org/kilocode/commit/d463a8b8b30787c8787a0a10c8d90656847758e9) Thanks [@Drilmo](https://github.com/Drilmo)! - Filter internal verification tags from assistant messages before displaying to users
+
+- [#5811](https://github.com/Kilo-Org/kilocode/pull/5811) [`90a34f6`](https://github.com/Kilo-Org/kilocode/commit/90a34f6e6a2718ab2d63f2474fe6c7b35f7a57f9) Thanks [@wombatepiclandingstudio](https://github.com/wombatepiclandingstudio)! - fix: prevent context token indicator flickering
+
+- [#5565](https://github.com/Kilo-Org/kilocode/pull/5565) [`d58ba04`](https://github.com/Kilo-Org/kilocode/commit/d58ba0462ea8555254dc23504d02c7927cdb928c) Thanks [@Githubguy132010](https://github.com/Githubguy132010)! - Fix file deletion auto-approve checkbox not being clickable
+
+- [#5377](https://github.com/Kilo-Org/kilocode/pull/5377) [`cf9d90e`](https://github.com/Kilo-Org/kilocode/commit/cf9d90e8b4dd94421ebe11ce3543375ab12e7c70) Thanks [@benzntech](https://github.com/benzntech)! - Fix recurring MODEL_NO_TOOLS_USED error loop by detecting text-based tool call hallucinations and instructing the model to use the native API.
+
+- [#5586](https://github.com/Kilo-Org/kilocode/pull/5586) [`ffb7d87`](https://github.com/Kilo-Org/kilocode/commit/ffb7d87e68dde7b0c404c9c3492bf76e2314bb99) Thanks [@abdulrahimpds](https://github.com/abdulrahimpds)! - Fixed UI issues in Settings search bar: clipping of results and layout shift when expanding
+
+- [#5752](https://github.com/Kilo-Org/kilocode/pull/5752) [`3db4b15`](https://github.com/Kilo-Org/kilocode/commit/3db4b158e331dd9dc376d0eea74ed163db75c7b0) Thanks [@Madrawn](https://github.com/Madrawn)! - fix(mentions): process slash commands in tool_result blocks
+
+    Previously, parseKiloSlashCommands was only called for text blocks,
+    causing slash commands in tool_result blocks to be ignored. This fix
+    extends the processing to tool_result blocks by using the new
+    processTextContent helper function that combines parseMentions and
+    parseKiloSlashCommands.
+
+    The regression test ensures that slash commands in tool responses are
+    properly processed and transformed.
+
+- [#5055](https://github.com/Kilo-Org/kilocode/pull/5055) [`74d904e`](https://github.com/Kilo-Org/kilocode/commit/74d904ea945d142489aee139cbb0572b406d08c3) Thanks [@Leoyzen](https://github.com/Leoyzen)! - feat: support preserving reasoning content in OpenAI format conversion
+
+- [#5739](https://github.com/Kilo-Org/kilocode/pull/5739) [`fc02342`](https://github.com/Kilo-Org/kilocode/commit/fc023426ee2dc1497f81fdea30c23b6f939faeea) Thanks [@rayss868](https://github.com/rayss868)! - Fix: Honor explicit 'disable' for reasoning effort
+
+- [#5167](https://github.com/Kilo-Org/kilocode/pull/5167) [`8b9de69`](https://github.com/Kilo-Org/kilocode/commit/8b9de69d30030dff0811d33e28d0ac699ce7e871) Thanks [@hdcodedev](https://github.com/hdcodedev)! - Fix: "Kill Command" button now reliably terminates processes on all platforms, including those running in the background.
+
+- [#5630](https://github.com/Kilo-Org/kilocode/pull/5630) [`29f287a`](https://github.com/Kilo-Org/kilocode/commit/29f287a65fa9b02de3ddfe52a38317f77411fd34) Thanks [@SenatusSPQR1](https://github.com/SenatusSPQR1)! - fix(nano-gpt): Add native reasoning field extraction
+
+- [#5814](https://github.com/Kilo-Org/kilocode/pull/5814) [`5b10436`](https://github.com/Kilo-Org/kilocode/commit/5b104360c175c3aebecd42d0e3c184d43fc767b6) Thanks [@shssoichiro](https://github.com/shssoichiro)! - Support custom embed dimensions for Ollama provider
+
+- [#5523](https://github.com/Kilo-Org/kilocode/pull/5523) [`5610aca`](https://github.com/Kilo-Org/kilocode/commit/5610aca37c401fd5958b548cb8eab6013779a3ed) Thanks [@abdulrahimpds](https://github.com/abdulrahimpds)! - Fix: Persist total API cost after message deletion
+
+- [#5150](https://github.com/Kilo-Org/kilocode/pull/5150) [`101b672`](https://github.com/Kilo-Org/kilocode/commit/101b672509c01b3a9756c2bf4e61f5d04c7307d6) Thanks [@hdcodedev](https://github.com/hdcodedev)! - fix: prevent duplicate tool_use/tool_result IDs in conversation history (#4482)
+
+- [#5149](https://github.com/Kilo-Org/kilocode/pull/5149) [`d39b51c`](https://github.com/Kilo-Org/kilocode/commit/d39b51cc8a8465e749ba424309dda8eebe14ea10) Thanks [@dacsang97](https://github.com/dacsang97)! - Enhance Anthropic extended thinking compatibility
+
+- [#5816](https://github.com/Kilo-Org/kilocode/pull/5816) [`e33a2ef`](https://github.com/Kilo-Org/kilocode/commit/e33a2ef4ae339deb52f4cfe8b3acd68ca4103345) Thanks [@evanjacobson](https://github.com/evanjacobson)! - Fix tool use failure for providers returning numeric tool call IDs (e.g. MiniMax) by coercing ID to string in the shared stream parser
+
+- [#5576](https://github.com/Kilo-Org/kilocode/pull/5576) [`b67879e`](https://github.com/Kilo-Org/kilocode/commit/b67879edaa29976c9312b372ecc62f3f5d076d62) Thanks [@Patel230](https://github.com/Patel230)! - fix: improve symlink handling in skills directory
+
+- [#5459](https://github.com/Kilo-Org/kilocode/pull/5459) [`4f2a7da`](https://github.com/Kilo-Org/kilocode/commit/4f2a7dafa19f2ed2f4f870522bef2fe855821276) Thanks [@Schrolli91](https://github.com/Schrolli91)! - Implement better formatting for low cost values
+
 ## 5.7.0
 
 ### Minor Changes
